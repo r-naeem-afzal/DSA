@@ -30,6 +30,7 @@ class Playlist:
         if self.is_empty():
             return
 
+        # If the song to remove is the first song
         if self.head.song == song:
             if self.head.next is not None:
                 self.head.next.prev = None
@@ -40,8 +41,11 @@ class Playlist:
         current_song = self.head
 
         while current_song.next is not None:
+            # If the song to remove is the next song of the current song being checked
             if current_song.next.song == song:
+                # remove the next song
                 current_song.next = current_song.next.next
+                # If the next song is not the last song
                 if current_song.next is not None:
                     current_song.next.prev = current_song
                 return
