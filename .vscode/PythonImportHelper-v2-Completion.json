@@ -40,6 +40,15 @@
         "documentation": {}
     },
     {
+        "label": "GroceryListManager",
+        "kind": 6,
+        "importPath": "data_structures.arrays.examples.grocery_list",
+        "description": "data_structures.arrays.examples.grocery_list",
+        "peekOfCode": "class GroceryListManager:\n    def __init__(self):\n        self.grocery_list = []\n    def display_menu(self):\n        print(\"\\nGrocery List Manager\")\n        print(\"1. Add Item\")\n        print(\"2. Remove Item\")\n        print(\"3. View List\")\n        print(\"4. Sort List\")\n        print(\"5. Reverse List\")",
+        "detail": "data_structures.arrays.examples.grocery_list",
+        "documentation": {}
+    },
+    {
         "label": "empty_array",
         "kind": 5,
         "importPath": "data_structures.arrays.arrays",
@@ -220,12 +229,21 @@
         "documentation": {}
     },
     {
-        "label": "GroceryListManager",
+        "label": "SongNode",
         "kind": 6,
-        "importPath": "data_structures.arrays.arrays_example",
-        "description": "data_structures.arrays.arrays_example",
-        "peekOfCode": "class GroceryListManager:\n    def __init__(self):\n        self.grocery_list = []\n    def display_menu(self):\n        print(\"\\nGrocery List Manager\")\n        print(\"1. Add Item\")\n        print(\"2. Remove Item\")\n        print(\"3. View List\")\n        print(\"4. Sort List\")\n        print(\"5. Reverse List\")",
-        "detail": "data_structures.arrays.arrays_example",
+        "importPath": "data_structures.linked_lists.examples.playlist",
+        "description": "data_structures.linked_lists.examples.playlist",
+        "peekOfCode": "class SongNode:\n    def __init__(self, song, next=None):\n        self.song = song\n        self.next = next\n        self.prev = None\nclass Playlist:\n    def __init__(self) -> None:\n        self.head: SongNode | None = None\n    def is_empty(self) -> bool:\n        return self.head is None",
+        "detail": "data_structures.linked_lists.examples.playlist",
+        "documentation": {}
+    },
+    {
+        "label": "Playlist",
+        "kind": 6,
+        "importPath": "data_structures.linked_lists.examples.playlist",
+        "description": "data_structures.linked_lists.examples.playlist",
+        "peekOfCode": "class Playlist:\n    def __init__(self) -> None:\n        self.head: SongNode | None = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def add_song(self, song: str) -> None:\n        new_song = SongNode(song)\n        if self.is_empty():\n            self.head = new_song\n            return",
+        "detail": "data_structures.linked_lists.examples.playlist",
         "documentation": {}
     },
     {
