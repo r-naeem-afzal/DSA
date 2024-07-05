@@ -1,0 +1,267 @@
+[
+    {
+        "label": "Node",
+        "importPath": "node",
+        "description": "node",
+        "isExtraImport": true,
+        "detail": "node",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "importPath": "node",
+        "description": "node",
+        "isExtraImport": true,
+        "detail": "node",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "empty_array",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "empty_array = []\n# * Create a filled arrau\nfilled_array = [\"A\", \"B\", \"C\"]\nprint(\"\\n\")\nprint(\"Accessing Elements\")\nprint(\"\\n\")\n# ? Method: Add\n# * Add an element to the end of the array\nempty_array.append(\"A\")\nprint(f\"Add an element to the end of the array: {empty_array}\")  # Output: ['A']",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "filled_array",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "filled_array = [\"A\", \"B\", \"C\"]\nprint(\"\\n\")\nprint(\"Accessing Elements\")\nprint(\"\\n\")\n# ? Method: Add\n# * Add an element to the end of the array\nempty_array.append(\"A\")\nprint(f\"Add an element to the end of the array: {empty_array}\")  # Output: ['A']\n# ? Method: Insert\n# * Insert an element at a specific index",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "numbers = [i for i in range(10)]\nprint(\n    f\"Create a list of numbers from 0 to 9: {numbers}\"\n)  # Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n# * Create a list of even numbers from 0 to 9\neven_numbers = [i for i in range(10) if i % 2 == 0]\nprint(\n    f\"Create a list of even numbers from 0 to 9: {even_numbers}\"\n)  # Output: [0, 2, 4, 6, 8]\n# * Create a list of squares from 0 to 9",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "even_numbers",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "even_numbers = [i for i in range(10) if i % 2 == 0]\nprint(\n    f\"Create a list of even numbers from 0 to 9: {even_numbers}\"\n)  # Output: [0, 2, 4, 6, 8]\n# * Create a list of squares from 0 to 9\nsquares = [i**2 for i in range(10)]\nprint(\n    f\"Create a list of squares from 0 to 9: {squares}\"\n)  # Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n# * Create a list of squares from 0 to 9, but only if the number is even",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "squares",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "squares = [i**2 for i in range(10)]\nprint(\n    f\"Create a list of squares from 0 to 9: {squares}\"\n)  # Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n# * Create a list of squares from 0 to 9, but only if the number is even\neven_squares = [i**2 for i in range(10) if i % 2 == 0]\nprint(\n    f\"Create a list of squares from 0 to 9, but only if the number is even: {even_squares}\"\n)  # Output: [0, 4, 16, 36, 64]\n# * Create a list of squares from 0 to 9, but only if the number is even, and the number is greater than 4",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "even_squares",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "even_squares = [i**2 for i in range(10) if i % 2 == 0]\nprint(\n    f\"Create a list of squares from 0 to 9, but only if the number is even: {even_squares}\"\n)  # Output: [0, 4, 16, 36, 64]\n# * Create a list of squares from 0 to 9, but only if the number is even, and the number is greater than 4\neven_squares_greater_than_4 = [i**2 for i in range(10) if i % 2 == 0 and i > 4]\nprint(\n    f\"Create a list of squares from 0 to 9, but only if the number is even, and the number is greater than 4: {even_squares_greater_than_4}\"\n)  # Output: [16, 36, 64]\nprint(\"\\n\")",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "even_squares_greater_than_4",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "even_squares_greater_than_4 = [i**2 for i in range(10) if i % 2 == 0 and i > 4]\nprint(\n    f\"Create a list of squares from 0 to 9, but only if the number is even, and the number is greater than 4: {even_squares_greater_than_4}\"\n)  # Output: [16, 36, 64]\nprint(\"\\n\")\nprint(\"Slicing Arrays\")\nprint(\"\\n\")\n#! Slicing Arrays\n# * Create an array of numbers from 0 to 9\nnumbers = [i for i in range(10)]",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "numbers = [i for i in range(10)]\nprint(\n    f\"Create an array of numbers from 0 to 9: {numbers}\"\n)  # Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n# * Get the first element\nfirst_element = numbers[0]\nprint(f\"Get the first element: {first_element}\")  # Output: 0\n# * Get the last element\nlast_element = numbers[-1]\nprint(f\"Get the last element: {last_element}\")  # Output: 9",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "first_element",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "first_element = numbers[0]\nprint(f\"Get the first element: {first_element}\")  # Output: 0\n# * Get the last element\nlast_element = numbers[-1]\nprint(f\"Get the last element: {last_element}\")  # Output: 9\n# * Get the first 3 elements\nfirst_3_elements = numbers[:3]\nprint(f\"Get the first 3 elements: {first_3_elements}\")  # Output: [0, 1, 2]\n# * Get the last 3 elements\nlast_3_elements = numbers[-3:]",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "last_element",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "last_element = numbers[-1]\nprint(f\"Get the last element: {last_element}\")  # Output: 9\n# * Get the first 3 elements\nfirst_3_elements = numbers[:3]\nprint(f\"Get the first 3 elements: {first_3_elements}\")  # Output: [0, 1, 2]\n# * Get the last 3 elements\nlast_3_elements = numbers[-3:]\nprint(f\"Get the last 3 elements: {last_3_elements}\")  # Output: [7, 8, 9]\n# * Get the elements from index 2 to 5\nelements_2_to_5 = numbers[2:6]",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "first_3_elements",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "first_3_elements = numbers[:3]\nprint(f\"Get the first 3 elements: {first_3_elements}\")  # Output: [0, 1, 2]\n# * Get the last 3 elements\nlast_3_elements = numbers[-3:]\nprint(f\"Get the last 3 elements: {last_3_elements}\")  # Output: [7, 8, 9]\n# * Get the elements from index 2 to 5\nelements_2_to_5 = numbers[2:6]\nprint(f\"Get the elements from index 2 to 5: {elements_2_to_5}\")  # Output: [2, 3, 4, 5]\n# * Get the elements from index 2 to 5, but only every other element\nelements_2_to_5_every_other = numbers[2:6:2]",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "last_3_elements",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "last_3_elements = numbers[-3:]\nprint(f\"Get the last 3 elements: {last_3_elements}\")  # Output: [7, 8, 9]\n# * Get the elements from index 2 to 5\nelements_2_to_5 = numbers[2:6]\nprint(f\"Get the elements from index 2 to 5: {elements_2_to_5}\")  # Output: [2, 3, 4, 5]\n# * Get the elements from index 2 to 5, but only every other element\nelements_2_to_5_every_other = numbers[2:6:2]\nprint(\n    f\"Get the elements from index 2 to 5, but only every other element: {elements_2_to_5_every_other}\"\n)  # Output: [2, 4]",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "elements_2_to_5",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "elements_2_to_5 = numbers[2:6]\nprint(f\"Get the elements from index 2 to 5: {elements_2_to_5}\")  # Output: [2, 3, 4, 5]\n# * Get the elements from index 2 to 5, but only every other element\nelements_2_to_5_every_other = numbers[2:6:2]\nprint(\n    f\"Get the elements from index 2 to 5, but only every other element: {elements_2_to_5_every_other}\"\n)  # Output: [2, 4]\n# * Reverse the array\nreversed_array = numbers[::-1]\nprint(f\"Reverse the array: {reversed_array}\")  # Output: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "elements_2_to_5_every_other",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "elements_2_to_5_every_other = numbers[2:6:2]\nprint(\n    f\"Get the elements from index 2 to 5, but only every other element: {elements_2_to_5_every_other}\"\n)  # Output: [2, 4]\n# * Reverse the array\nreversed_array = numbers[::-1]\nprint(f\"Reverse the array: {reversed_array}\")  # Output: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]\n# * Reverse the array, but only every other element\nreversed_array_every_other = numbers[::-2]\nprint(",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "reversed_array",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "reversed_array = numbers[::-1]\nprint(f\"Reverse the array: {reversed_array}\")  # Output: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]\n# * Reverse the array, but only every other element\nreversed_array_every_other = numbers[::-2]\nprint(\n    f\"Reverse the array, but only every other element: {reversed_array_every_other}\"\n)  # Output: [9, 7, 5, 3, 1]\n# * Reverse the array, but only the first 5 elements\nreversed_array_first_5 = numbers[5::-1]\nprint(",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "reversed_array_every_other",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "reversed_array_every_other = numbers[::-2]\nprint(\n    f\"Reverse the array, but only every other element: {reversed_array_every_other}\"\n)  # Output: [9, 7, 5, 3, 1]\n# * Reverse the array, but only the first 5 elements\nreversed_array_first_5 = numbers[5::-1]\nprint(\n    f\"Reverse the array, but only the first 5 elements: {reversed_array_first_5}\"\n)  # Output: [5, 4, 3, 2, 1, 0]\n# * Reverse the array, but only the last 5 elements",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "reversed_array_first_5",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "reversed_array_first_5 = numbers[5::-1]\nprint(\n    f\"Reverse the array, but only the first 5 elements: {reversed_array_first_5}\"\n)  # Output: [5, 4, 3, 2, 1, 0]\n# * Reverse the array, but only the last 5 elements\nreversed_array_last_5 = numbers[:-6:-1]\nprint(\n    f\"Reverse the array, but only the last 5 elements: {reversed_array_last_5}\"\n)  # Output: [9, 8, 7, 6, 5]\n# * Reverse the array, but only the first 5 elements, and only every other element",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "reversed_array_last_5",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "reversed_array_last_5 = numbers[:-6:-1]\nprint(\n    f\"Reverse the array, but only the last 5 elements: {reversed_array_last_5}\"\n)  # Output: [9, 8, 7, 6, 5]\n# * Reverse the array, but only the first 5 elements, and only every other element\nreversed_array_first_5_every_other = numbers[5::-2]\nprint(\n    f\"Reverse the array, but only the first 5 elements, and only every other element: {reversed_array_first_5_every_other}\"\n)  # Output: [5, 3, 1]\n# * Reverse the array, but only the last 5 elements, and only every other element",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "reversed_array_first_5_every_other",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "reversed_array_first_5_every_other = numbers[5::-2]\nprint(\n    f\"Reverse the array, but only the first 5 elements, and only every other element: {reversed_array_first_5_every_other}\"\n)  # Output: [5, 3, 1]\n# * Reverse the array, but only the last 5 elements, and only every other element\nreversed_array_last_5_every_other = numbers[:-6:-2]\nprint(\n    f\"Reverse the array, but only the last 5 elements, and only every other element: {reversed_array_last_5_every_other}\"\n)  # Output: [9, 7, 5]",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "reversed_array_last_5_every_other",
+        "kind": 5,
+        "importPath": "data_structures.arrays.arrays",
+        "description": "data_structures.arrays.arrays",
+        "peekOfCode": "reversed_array_last_5_every_other = numbers[:-6:-2]\nprint(\n    f\"Reverse the array, but only the last 5 elements, and only every other element: {reversed_array_last_5_every_other}\"\n)  # Output: [9, 7, 5]",
+        "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "GroceryListManager",
+        "kind": 6,
+        "importPath": "data_structures.arrays.arrays_example",
+        "description": "data_structures.arrays.arrays_example",
+        "peekOfCode": "class GroceryListManager:\n    def __init__(self):\n        self.grocery_list = []\n    def display_menu(self):\n        print(\"\\nGrocery List Manager\")\n        print(\"1. Add Item\")\n        print(\"2. Remove Item\")\n        print(\"3. View List\")\n        print(\"4. Sort List\")\n        print(\"5. Reverse List\")",
+        "detail": "data_structures.arrays.arrays_example",
+        "documentation": {}
+    },
+    {
+        "label": "DoublyLinkedList",
+        "kind": 6,
+        "importPath": "data_structures.linked_lists.doubly_linked_list",
+        "description": "data_structures.linked_lists.doubly_linked_list",
+        "peekOfCode": "class DoublyLinkedList:\n    def __init__(self) -> None:\n        self.head: Node | None = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def append(self, data: Any) -> None:\n        \"\"\"\n        Add a new node to the end of the list\n        \"\"\"\n        new_node = Node(data)",
+        "detail": "data_structures.linked_lists.doubly_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "index_error_message",
+        "kind": 5,
+        "importPath": "data_structures.linked_lists.doubly_linked_list",
+        "description": "data_structures.linked_lists.doubly_linked_list",
+        "peekOfCode": "index_error_message = \"Index out of range\"\nclass DoublyLinkedList:\n    def __init__(self) -> None:\n        self.head: Node | None = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def append(self, data: Any) -> None:\n        \"\"\"\n        Add a new node to the end of the list\n        \"\"\"",
+        "detail": "data_structures.linked_lists.doubly_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "kind": 6,
+        "importPath": "data_structures.linked_lists.node",
+        "description": "data_structures.linked_lists.node",
+        "peekOfCode": "class Node:\n    def __init__(self, data: Any) -> None:\n        self.data = data\n        self.next: Node | None = None\n        self.prev: Node | None = None",
+        "detail": "data_structures.linked_lists.node",
+        "documentation": {}
+    },
+    {
+        "label": "SinglyLinkedList",
+        "kind": 6,
+        "importPath": "data_structures.linked_lists.singly_linked_list",
+        "description": "data_structures.linked_lists.singly_linked_list",
+        "peekOfCode": "class SinglyLinkedList:\n    def __init__(self) -> None:\n        self.head: Node | None = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def append(self, data: Any) -> None:\n        \"\"\"\n        Add a new node to the end of the list\n        \"\"\"\n        new_node = Node(data)",
+        "detail": "data_structures.linked_lists.singly_linked_list",
+        "documentation": {}
+    }
+]

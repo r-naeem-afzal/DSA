@@ -2,7 +2,10 @@ from node import Node
 from typing import Any
 
 
-class SinglyLinkedList:
+index_error_message = "Index out of range"
+
+
+class DoublyLinkedList:
     def __init__(self) -> None:
         self.head: Node | None = None
 
@@ -20,21 +23,24 @@ class SinglyLinkedList:
             return
 
         current_node = self.head
+
         while current_node.next is not None:
             current_node = current_node.next
 
         current_node.next = new_node
+        new_node.prev = current_node
 
     def prepend(self, data: Any) -> None:
         """
         Add a new node to the beginning of the list
         """
-
         new_node = Node(data)
 
         new_node.next = self.head
 
         self.head = new_node
+
+        self.head.next.prev = new_node
 
     def insert(self, data: Any, index: int) -> None:
         """
@@ -48,90 +54,85 @@ class SinglyLinkedList:
 
         current_node = self.head
         for _ in range(index - 1):
+            if current_node is None:
+                raise IndexError(index_error_message)
             current_node = current_node.next
 
         new_node.next = current_node.next
+        new_node.prev = current_node
         current_node.next = new_node
 
-    def remove(self, data: Any) -> None:
+        if new_node.next is not None:
+            new_node.next.prev = new_node
+
+    def remove(self, index: int) -> None:
         """
-        Remove the first node with the specified data
+        Remove a node at a specific index
         """
 
-        if self.is_empty():
-            return
-
-        if self.head.data == data:
-            self.head = self.head.next
-            return
-
-        current_node = self.head
-        while current_node.next is not None and current_node.next.data != data:
-            current_node = current_node.next
-
-        if current_node.next is not None:
-            current_node.next = current_node.next.next
-
-    def pop(self, index: int) -> None:
-        """
-        Remove the node at a specific index
-        """
         if index == 0:
             self.head = self.head.next
+            if self.head is not None:
+                self.head.prev = None
             return
 
         current_node = self.head
         for _ in range(index - 1):
+            if current_node is None:
+                raise IndexError(index_error_message)
             current_node = current_node.next
 
+        if current_node.next is None:
+            raise IndexError(index_error_message)
+
         current_node.next = current_node.next.next
+        if current_node.next is not None:
+            current_node.next.prev = current_node
 
     def __str__(self) -> str:
         """
         Return a string representation of the list
         """
-        if self.is_empty():
-            return ""
-
         current_node = self.head
-        string = ""
+        nodes = []
         while current_node is not None:
-            string += str(current_node.data)
+            nodes.append(str(current_node.data))
             current_node = current_node.next
-            if current_node is not None:
-                string += " -> "
+        return " -> ".join(nodes)
 
-        return string
+    def __len__(self) -> int:
+        """
+        Return the length of the list
+        """
+        current_node = self.head
+        count = 0
+        while current_node is not None:
+            count += 1
+            current_node = current_node.next
+        return count
 
     def __getitem__(self, index: int) -> Any:
         """
-        Return the data of the node at the specified index
+        Return the data of the node at a specific index
         """
+        if index < 0:
+            index += len(self)
+        if index < 0 or index >= len(self):
+            raise IndexError(index_error_message)
         current_node = self.head
         for _ in range(index):
-            if current_node is None:
-                raise IndexError("Index out of range")
             current_node = current_node.next
-
-        if current_node is None:
-            raise IndexError("Index out of range")
-
         return current_node.data
 
 
 if __name__ == "__main__":
-    linked_list = SinglyLinkedList()
-
-    linked_list.append("A")
-    linked_list.append("B")
-    linked_list.append("C")
-    linked_list.prepend("Z")
-    linked_list.insert("Y", 2)
-
-    print(linked_list)  # Output: Z -> A -> Y -> B -> C
-
-    linked_list.remove("A")
-
-    linked_list.pop(2)
-
-    print(linked_list)  # Output: Z -> Y -> C
+    linked_list = DoublyLinkedList()
+    linked_list.append(1)
+    linked_list.append(2)
+    linked_list.append(3)
+    linked_list.prepend(0)
+    linked_list.insert(2, 2)
+    linked_list.remove(2)
+    print(linked_list)  # Output: 0 -> 1 -> 2 -> 3
+    print(len(linked_list))  # Output: 4
+    print(linked_list[2])  # Output: 2
