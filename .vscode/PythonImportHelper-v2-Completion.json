@@ -74,6 +74,14 @@
         "documentation": {}
     },
     {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Node",
         "importPath": "data_structures.linked_lists.node",
         "description": "data_structures.linked_lists.node",
@@ -103,6 +111,14 @@
         "description": "node",
         "isExtraImport": true,
         "detail": "node",
+        "documentation": {}
+    },
+    {
+        "label": "Stack",
+        "importPath": "stacks.stack",
+        "description": "stacks.stack",
+        "isExtraImport": true,
+        "detail": "stacks.stack",
         "documentation": {}
     },
     {
@@ -418,6 +434,42 @@
         "description": "data_structures.linked_lists.singly_linked_list",
         "peekOfCode": "class SinglyLinkedList:\n    def __init__(self) -> None:\n        self.head: Node | None = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def append(self, data: Any) -> None:\n        \"\"\"\n        Add a new node to the end of the list\n        \"\"\"\n        new_node = Node(data)",
         "detail": "data_structures.linked_lists.singly_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "TextEditor",
+        "kind": 6,
+        "importPath": "data_structures.stacks.examples.text_editor_undo",
+        "description": "data_structures.stacks.examples.text_editor_undo",
+        "peekOfCode": "class TextEditor:\n    def __init__(self) -> None:\n        self.text = \"\"\n        self.undo_stack = Stack()\n    def write(self, text: str) -> None:\n        self.text += text\n        self.undo_stack.push(f\"Undo: Delete {len(text)} characters\")\n    def delete(self, num_characters: int) -> None:\n        if num_characters > len(self.text):\n            print(\"Cannot delete more characters than present in the text.\")",
+        "detail": "data_structures.stacks.examples.text_editor_undo",
+        "documentation": {}
+    },
+    {
+        "label": "editor",
+        "kind": 5,
+        "importPath": "data_structures.stacks.examples.text_editor_undo",
+        "description": "data_structures.stacks.examples.text_editor_undo",
+        "peekOfCode": "editor = TextEditor()\neditor.write(\"Hello\")\neditor.write(\" World\")\neditor.display()  # Output: Current text: Hello World\neditor.delete(1)\neditor.display()  # Output: Current text: Hello Worl\neditor.undo()\neditor.display()  # Output: Current text: Hello World\neditor.undo()\neditor.display()  # Output: Current text: Hello",
+        "detail": "data_structures.stacks.examples.text_editor_undo",
+        "documentation": {}
+    },
+    {
+        "label": "Stack",
+        "kind": 6,
+        "importPath": "data_structures.stacks.stack",
+        "description": "data_structures.stacks.stack",
+        "peekOfCode": "class Stack:\n    def __init__(self) -> None:\n        self.stack = []\n    def is_empty(self) -> bool:\n        return len(self.stack) == 0\n    def push(self, item: Any) -> None:\n        self.stack.append(item)\n    def pop(self) -> Any:\n        if self.is_empty():\n            print(\"Stack is empty.\")",
+        "detail": "data_structures.stacks.stack",
+        "documentation": {}
+    },
+    {
+        "label": "stack",
+        "kind": 5,
+        "importPath": "data_structures.stacks.stack",
+        "description": "data_structures.stacks.stack",
+        "peekOfCode": "stack = Stack()\nstack.push(1)\nstack.push(2)\nstack.push(3)\nstack.display()  # Output: Stack: [1, 2, 3]\nprint(\"Peek:\", stack.peek())  # Output: Peek: 3\nstack.pop()  # Output: Popped 3 from the stack.\nstack.display()  # Output: Stack: [1, 2]",
+        "detail": "data_structures.stacks.stack",
         "documentation": {}
     }
 ]
