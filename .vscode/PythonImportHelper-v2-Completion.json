@@ -1,10 +1,10 @@
 [
     {
-        "label": "CircularLinkedList",
-        "importPath": "data_structures.linked_lists.circular_linked_list",
-        "description": "data_structures.linked_lists.circular_linked_list",
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
         "isExtraImport": true,
-        "detail": "data_structures.linked_lists.circular_linked_list",
+        "detail": "collections",
         "documentation": {}
     },
     {
@@ -23,6 +23,22 @@
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "MinHeap",
+        "importPath": "heaps.min_heap",
+        "description": "heaps.min_heap",
+        "isExtraImport": true,
+        "detail": "heaps.min_heap",
+        "documentation": {}
+    },
+    {
+        "label": "CircularLinkedList",
+        "importPath": "data_structures.linked_lists.circular_linked_list",
+        "description": "data_structures.linked_lists.circular_linked_list",
+        "isExtraImport": true,
+        "detail": "data_structures.linked_lists.circular_linked_list",
         "documentation": {}
     },
     {
@@ -340,6 +356,24 @@
         "description": "data_structures.arrays.arrays",
         "peekOfCode": "reversed_array_last_5_every_other = numbers[:-6:-2]\nprint(\n    f\"Reverse the array, but only the last 5 elements, and only every other element: {reversed_array_last_5_every_other}\"\n)  # Output: [9, 7, 5]",
         "detail": "data_structures.arrays.arrays",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "kind": 6,
+        "importPath": "data_structures.graphs.graph",
+        "description": "data_structures.graphs.graph",
+        "peekOfCode": "class Graph:\n    \"\"\"\n    A class to represent an undirected graph using an adjacency list. An adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a vertex in the graph. In this implementation, a dictionary is used to store the adjacency list. The keys of the dictionary represent the vertices, and the values represent the neighbors of the corresponding vertex.\n    Attributes:\n    - graph: A dictionary to store the adjacency list of the graph.\n    Methods:\n    - add_edge(u: int, v: int) -> None: Adds an edge between vertices u and v.\n    - remove_edge(u: int, v: int) -> None: Removes the edge between vertices u and v.\n    - add_vertex(v: int) -> None: Adds a new vertex to the graph.\n    - remove_vertex(v: int) -> None: Removes a vertex from the graph.",
+        "detail": "data_structures.graphs.graph",
+        "documentation": {}
+    },
+    {
+        "label": "TaskScheduler",
+        "kind": 6,
+        "importPath": "data_structures.heaps.examples.task_scheduler",
+        "description": "data_structures.heaps.examples.task_scheduler",
+        "peekOfCode": "class TaskScheduler:\n    def __init__(self) -> None:\n        self.tasks = MinHeap()\n    def add_task(self, task: str, priority: int) -> None:\n        self.tasks.insert((priority, task))\n        print(f'Task \"{task}\" added to the scheduler.')\n    def get_next_task(self) -> None:\n        task = self.tasks.extract_min()\n        if task:\n            print(f'Next task: \"{task[1]}\"')",
+        "detail": "data_structures.heaps.examples.task_scheduler",
         "documentation": {}
     },
     {

@@ -48,6 +48,10 @@ class MinHeap:
     def __init__(self) -> None:
         self.heap = []
 
+    def peek(self) -> int | None:
+        if self.heap:
+            return self.heap[0]
+
     def get_parent_index(self, index: int) -> int:
         return (index - 1) // 2
 
