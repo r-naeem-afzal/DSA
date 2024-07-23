@@ -126,6 +126,7 @@ print(
     f"Reverse the array, but only the first 5 elements, and only every other element: {reversed_array_first_5_every_other}"
 )  # Output: [5, 3, 1]
 
+
 # * Reverse the array, but only the last 5 elements, and only every other element
 reversed_array_last_5_every_other = numbers[:-6:-2]
 print(

@@ -1,5 +1,95 @@
 [
     {
+        "label": "CircularLinkedList",
+        "importPath": "data_structures.linked_lists.circular_linked_list",
+        "description": "data_structures.linked_lists.circular_linked_list",
+        "isExtraImport": true,
+        "detail": "data_structures.linked_lists.circular_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "DoublyCircularLinkedList",
+        "importPath": "linked_lists.doubly_circular_linked_list",
+        "description": "linked_lists.doubly_circular_linked_list",
+        "isExtraImport": true,
+        "detail": "linked_lists.doubly_circular_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "importPath": "data_structures.linked_lists.node",
+        "description": "data_structures.linked_lists.node",
+        "isExtraImport": true,
+        "detail": "data_structures.linked_lists.node",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "importPath": "data_structures.linked_lists.node",
+        "description": "data_structures.linked_lists.node",
+        "isExtraImport": true,
+        "detail": "data_structures.linked_lists.node",
+        "documentation": {}
+    },
+    {
         "label": "Node",
         "importPath": "node",
         "description": "node",
@@ -13,30 +103,6 @@
         "description": "node",
         "isExtraImport": true,
         "detail": "node",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
         "documentation": {}
     },
     {
@@ -229,21 +295,93 @@
         "documentation": {}
     },
     {
+        "label": "MusicPlaylist",
+        "kind": 6,
+        "importPath": "data_structures.linked_lists.examples.circular_linked_playlist",
+        "description": "data_structures.linked_lists.examples.circular_linked_playlist",
+        "peekOfCode": "class MusicPlaylist:\n    def __init__(self):\n        self.playlist = CircularLinkedList()\n    def add_song(self, song_name):\n        self.playlist.append(song_name)\n        print(f'Song \"{song_name}\" added to the playlist.')\n    def remove_song(self, song_name):\n        self.playlist.delete_node(song_name)\n        print(f'Song \"{song_name}\" removed from the playlist.')\n    def show_playlist(self):",
+        "detail": "data_structures.linked_lists.examples.circular_linked_playlist",
+        "documentation": {}
+    },
+    {
+        "label": "playlist",
+        "kind": 5,
+        "importPath": "data_structures.linked_lists.examples.circular_linked_playlist",
+        "description": "data_structures.linked_lists.examples.circular_linked_playlist",
+        "peekOfCode": "playlist = MusicPlaylist()\nplaylist.add_song(\"Song 1\")\nplaylist.add_song(\"Song 2\")\nplaylist.add_song(\"Song 3\")\nplaylist.show_playlist()  # Output: Current Playlist: Song 1 -> Song 2 -> Song 3\nplaylist.remove_song(\"Song 2\")\nplaylist.show_playlist()  # Output: Current Playlist: Song 1 -> Song 3",
+        "detail": "data_structures.linked_lists.examples.circular_linked_playlist",
+        "documentation": {}
+    },
+    {
+        "label": "Carousel",
+        "kind": 6,
+        "importPath": "data_structures.linked_lists.examples.doubly_linked_list_carousel",
+        "description": "data_structures.linked_lists.examples.doubly_linked_list_carousel",
+        "peekOfCode": "class Carousel:\n    def __init__(self) -> None:\n        self.images = DoublyCircularLinkedList()\n    def add_image(self, image_name: str) -> None:\n        self.images.append(image_name)\n        print(f'Image \"{image_name}\" added to the carousel.')\n    def remove_image(self, image_name: str) -> None:\n        self.images.delete_node(image_name)\n        print(f'Image \"{image_name}\" removed from the carousel.')\n    def show_images(self) -> None:",
+        "detail": "data_structures.linked_lists.examples.doubly_linked_list_carousel",
+        "documentation": {}
+    },
+    {
+        "label": "carousel",
+        "kind": 5,
+        "importPath": "data_structures.linked_lists.examples.doubly_linked_list_carousel",
+        "description": "data_structures.linked_lists.examples.doubly_linked_list_carousel",
+        "peekOfCode": "carousel = Carousel()\ncarousel.add_image(\"image1.jpg\")\ncarousel.add_image(\"image2.jpg\")\ncarousel.add_image(\"image3.jpg\")\ncarousel.show_images()  # Output: Carousel (forward): image1.jpg -> image2.jpg -> image3.jpg\ncarousel.show_images_reverse()  # Output: Carousel (backward): image3.jpg -> image2.jpg -> image1.jpg\ncarousel.remove_image(\"image2.jpg\")\ncarousel.show_images()  # Output: Carousel (forward): image1.jpg -> image3.jpg",
+        "detail": "data_structures.linked_lists.examples.doubly_linked_list_carousel",
+        "documentation": {}
+    },
+    {
         "label": "SongNode",
         "kind": 6,
-        "importPath": "data_structures.linked_lists.examples.playlist",
-        "description": "data_structures.linked_lists.examples.playlist",
+        "importPath": "data_structures.linked_lists.examples.doubly_linked_playlist",
+        "description": "data_structures.linked_lists.examples.doubly_linked_playlist",
         "peekOfCode": "class SongNode:\n    def __init__(self, song, next=None):\n        self.song = song\n        self.next = next\n        self.prev = None\nclass Playlist:\n    def __init__(self) -> None:\n        self.head: SongNode | None = None\n    def is_empty(self) -> bool:\n        return self.head is None",
-        "detail": "data_structures.linked_lists.examples.playlist",
+        "detail": "data_structures.linked_lists.examples.doubly_linked_playlist",
         "documentation": {}
     },
     {
         "label": "Playlist",
         "kind": 6,
-        "importPath": "data_structures.linked_lists.examples.playlist",
-        "description": "data_structures.linked_lists.examples.playlist",
+        "importPath": "data_structures.linked_lists.examples.doubly_linked_playlist",
+        "description": "data_structures.linked_lists.examples.doubly_linked_playlist",
         "peekOfCode": "class Playlist:\n    def __init__(self) -> None:\n        self.head: SongNode | None = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def add_song(self, song: str) -> None:\n        new_song = SongNode(song)\n        if self.is_empty():\n            self.head = new_song\n            return",
-        "detail": "data_structures.linked_lists.examples.playlist",
+        "detail": "data_structures.linked_lists.examples.doubly_linked_playlist",
+        "documentation": {}
+    },
+    {
+        "label": "CircularLinkedList",
+        "kind": 6,
+        "importPath": "data_structures.linked_lists.circular_linked_list",
+        "description": "data_structures.linked_lists.circular_linked_list",
+        "peekOfCode": "class CircularLinkedList:\n    def __init__(self) -> None:\n        self.head = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def append(self, data: Any) -> None:\n        new_node = Node(data)\n        if self.is_empty():\n            self.head = new_node\n            new_node.next = self.head",
+        "detail": "data_structures.linked_lists.circular_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "cll",
+        "kind": 5,
+        "importPath": "data_structures.linked_lists.circular_linked_list",
+        "description": "data_structures.linked_lists.circular_linked_list",
+        "peekOfCode": "cll = CircularLinkedList()\ncll.append(\"A\")\ncll.append(\"B\")\ncll.append(\"C\")\ncll.prepend(\"D\")\nprint(\n    \"Circular Linked List:\", cll.display()\n)  # Output: Circular Linked List: ['D', 'A', 'B', 'C']\ncll.delete_node(\"B\")\nprint(\"After Deleting B:\", cll.display())  # Output: After Deleting B: ['D', 'A', 'C']",
+        "detail": "data_structures.linked_lists.circular_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "DoublyCircularLinkedList",
+        "kind": 6,
+        "importPath": "data_structures.linked_lists.doubly_circular_linked_list",
+        "description": "data_structures.linked_lists.doubly_circular_linked_list",
+        "peekOfCode": "class DoublyCircularLinkedList:\n    def __init__(self) -> None:\n        self.head = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def __is_next_node_head(self, current_node: Node) -> bool:\n        return current_node.next == self.head\n    def __get_next_node(self, current_node: Node) -> Node:\n        return current_node.next\n    def append(self, data: Any) -> None:",
+        "detail": "data_structures.linked_lists.doubly_circular_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "dll",
+        "kind": 5,
+        "importPath": "data_structures.linked_lists.doubly_circular_linked_list",
+        "description": "data_structures.linked_lists.doubly_circular_linked_list",
+        "peekOfCode": "dll = DoublyCircularLinkedList()\ndll.append(\"A\")\ndll.append(\"B\")\ndll.append(\"C\")\ndll.prepend(\"D\")\nprint(\"Forward:\", dll.display())  # Output: Forward: ['D', 'A', 'B', 'C']\nprint(\"Backward:\", dll.display_reverse())  # Output: Backward: ['C', 'B', 'A', 'D']\ndll.insert_after(\"B\", \"E\")\nprint(\n    \"After Inserting E after B:\", dll.display()",
+        "detail": "data_structures.linked_lists.doubly_circular_linked_list",
         "documentation": {}
     },
     {

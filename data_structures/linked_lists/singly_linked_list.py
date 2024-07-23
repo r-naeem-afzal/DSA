@@ -118,6 +118,25 @@ class SinglyLinkedList:
 
         return current_node.data
 
+    def __eq__(self, value: Any) -> bool:
+        """
+        Check if the value is equal to the list
+        """
+        if not isinstance(value, SinglyLinkedList):
+            return False
+
+        current_node = self.head
+        other_current_node = value.head
+
+        while current_node is not None and other_current_node is not None:
+            if current_node.data != other_current_node.data:
+                return False
+
+            current_node = current_node.next
+            other_current_node = other_current_node.next
+
+        return current_node is None and other_current_node is None
+
 
 if __name__ == "__main__":
     linked_list = SinglyLinkedList()
