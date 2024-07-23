@@ -82,6 +82,22 @@
         "documentation": {}
     },
     {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "importPath": "data_structures.linked_lists.node",
+        "description": "data_structures.linked_lists.node",
+        "isExtraImport": true,
+        "detail": "data_structures.linked_lists.node",
+        "documentation": {}
+    },
+    {
         "label": "Node",
         "importPath": "data_structures.linked_lists.node",
         "description": "data_structures.linked_lists.node",
@@ -365,6 +381,15 @@
         "documentation": {}
     },
     {
+        "label": "SONG_4",
+        "kind": 5,
+        "importPath": "data_structures.linked_lists.examples.doubly_linked_playlist",
+        "description": "data_structures.linked_lists.examples.doubly_linked_playlist",
+        "peekOfCode": "SONG_4 = \"Song 4\"\nif __name__ == \"__main__\":\n    playlist = Playlist()\n    playlist.add_song(\"Song 1\")\n    playlist.add_song(\"Song 2\")\n    playlist.add_song(\"Song 3\")\n    playlist.add_song(SONG_4)\n    playlist.add_song(\"Song 5\")\n    playlist.display_songs()\n    print()",
+        "detail": "data_structures.linked_lists.examples.doubly_linked_playlist",
+        "documentation": {}
+    },
+    {
         "label": "CircularLinkedList",
         "kind": 6,
         "importPath": "data_structures.linked_lists.circular_linked_list",
@@ -437,6 +462,24 @@
         "documentation": {}
     },
     {
+        "label": "StackLinkedList",
+        "kind": 6,
+        "importPath": "data_structures.linked_lists.stack_linked_list",
+        "description": "data_structures.linked_lists.stack_linked_list",
+        "peekOfCode": "class StackLinkedList:\n    def __init__(self) -> None:\n        self.head = None\n    def push(self, data: Any) -> None:\n        new_node = Node(data)\n        if self.is_empty():\n            self.head = new_node\n            return\n        new_node.next = self.head\n        self.head = new_node",
+        "detail": "data_structures.linked_lists.stack_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "stack",
+        "kind": 5,
+        "importPath": "data_structures.linked_lists.stack_linked_list",
+        "description": "data_structures.linked_lists.stack_linked_list",
+        "peekOfCode": "stack = StackLinkedList()\nstack.push(1)\nstack.push(2)\nstack.push(3)\nstack.display()  # Output: Stack: Top -> 3 -> 2 -> 1\nprint(\"Peek:\", stack.peek())  # Output: Peek: 3\nstack.pop()  # Output: Popped 3 from the stack.\nstack.display()  # Output: Stack: Top -> 2 -> 1",
+        "detail": "data_structures.linked_lists.stack_linked_list",
+        "documentation": {}
+    },
+    {
         "label": "TextEditor",
         "kind": 6,
         "importPath": "data_structures.stacks.examples.text_editor_undo",
@@ -459,7 +502,7 @@
         "kind": 6,
         "importPath": "data_structures.stacks.stack",
         "description": "data_structures.stacks.stack",
-        "peekOfCode": "class Stack:\n    def __init__(self) -> None:\n        self.stack = []\n    def is_empty(self) -> bool:\n        return len(self.stack) == 0\n    def push(self, item: Any) -> None:\n        self.stack.append(item)\n    def pop(self) -> Any:\n        if self.is_empty():\n            print(\"Stack is empty.\")",
+        "peekOfCode": "class Stack:\n    def __init__(self) -> None:\n        self.items = []\n    def is_empty(self) -> bool:\n        return len(self.items) == 0\n    def push(self, item: Any) -> None:\n        self.items.append(item)\n    def pop(self) -> Any:\n        if self.is_empty():\n            print(\"Stack is empty.\")",
         "detail": "data_structures.stacks.stack",
         "documentation": {}
     },

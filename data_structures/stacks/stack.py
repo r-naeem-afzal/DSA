@@ -8,19 +8,19 @@ from typing import Any
 
 class Stack:
     def __init__(self) -> None:
-        self.stack = []
+        self.items = []
 
     def is_empty(self) -> bool:
-        return len(self.stack) == 0
+        return len(self.items) == 0
 
     def push(self, item: Any) -> None:
-        self.stack.append(item)
+        self.items.append(item)
 
     def pop(self) -> Any:
         if self.is_empty():
             print("Stack is empty.")
             return
-        return self.stack.pop()
+        return self.items.pop()
 
     def peek(self) -> Any:
         """
@@ -28,7 +28,7 @@ class Stack:
         """
 
         if not self.is_empty():
-            return self.stack[-1]
+            return self.items[-1]
         print("Stack is empty.")
 
     def display(self) -> None:
@@ -36,7 +36,7 @@ class Stack:
             print("Stack is empty.")
             return
 
-        print("Stack:", " -> ".join(str(item) for item in self.stack))
+        print("Stack:", " -> ".join(str(item) for item in self.items))
 
 
 # ---------------------------------- EXAMPLE --------------------------------- #

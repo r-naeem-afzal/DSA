@@ -63,12 +63,14 @@ class Playlist:
             current_song = current_song.next
 
 
+SONG_4 = "Song 4"
+
 if __name__ == "__main__":
     playlist = Playlist()
     playlist.add_song("Song 1")
     playlist.add_song("Song 2")
     playlist.add_song("Song 3")
-    playlist.add_song("Song 4")
+    playlist.add_song(SONG_4)
     playlist.add_song("Song 5")
     playlist.display_songs()
     print()
@@ -84,8 +86,8 @@ if __name__ == "__main__":
     playlist.remove_song("Song 2")
     playlist.display_songs()
     print()
-    playlist.remove_song("Song 4")
+    playlist.remove_song(SONG_4)
     playlist.display_songs()
     print()
-    playlist.remove_song("Song 4")
+    playlist.remove_song(SONG_4)
     playlist.display_songs()
