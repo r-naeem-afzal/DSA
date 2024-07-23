@@ -9,6 +9,35 @@ from data_structures.linked_lists.node import Node
 
 
 class StackLinkedList:
+    """
+    A stack is a linear data structure that follows the Last In First Out (LIFO) principle. The last element added to the stack is the first element to be removed. A stack can be implemented using an array or a linked list. In this implementation, a singly linked list is used.
+
+    Operations:
+    - push: Add an element to the top of the stack.
+    - pop: Remove and return the element at the top of the stack.
+    - peek: Get the element at the top of the stack without removing it.
+    - is_empty: Check if the stack is empty.
+    - display: Display the elements in the stack.
+
+    Applications:
+    - Function calls and recursion
+    - Undo mechanisms in text editors
+    - Backtracking algorithms
+
+    Time Complexity:
+    - push: O(1)
+    - pop: O(1)
+    - peek: O(1)
+    - is_empty: O(1)
+    - display: O(n)
+
+    Space Complexity:
+    - O(n)
+
+    Attributes:
+    - head: The top of the stack
+    """
+
     def __init__(self) -> None:
         self.head = None
 
@@ -54,11 +83,12 @@ class StackLinkedList:
         print(f"Stack: {stack_str[:-4]}")
 
 
-stack = StackLinkedList()
-stack.push(1)
-stack.push(2)
-stack.push(3)
-stack.display()  # Output: Stack: Top -> 3 -> 2 -> 1
-print("Peek:", stack.peek())  # Output: Peek: 3
-stack.pop()  # Output: Popped 3 from the stack.
-stack.display()  # Output: Stack: Top -> 2 -> 1
+if __name__ == "__main__":
+    stack = StackLinkedList()
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
+    stack.display()  # Output: Stack: Top -> 3 -> 2 -> 1
+    print("Peek:", stack.peek())  # Output: Peek: 3
+    stack.pop()  # Output: Popped 3 from the stack.
+    stack.display()  # Output: Stack: Top -> 2 -> 1

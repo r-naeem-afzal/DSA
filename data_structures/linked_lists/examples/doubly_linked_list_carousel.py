@@ -35,11 +35,12 @@ class Carousel:
             print("The carousel is empty.")
 
 
-carousel = Carousel()
-carousel.add_image("image1.jpg")
-carousel.add_image("image2.jpg")
-carousel.add_image("image3.jpg")
-carousel.show_images()  # Output: Carousel (forward): image1.jpg -> image2.jpg -> image3.jpg
-carousel.show_images_reverse()  # Output: Carousel (backward): image3.jpg -> image2.jpg -> image1.jpg
-carousel.remove_image("image2.jpg")
-carousel.show_images()  # Output: Carousel (forward): image1.jpg -> image3.jpg
+if __name__ == "__main__":
+    carousel = Carousel()
+    carousel.add_image("image1.jpg")
+    carousel.add_image("image2.jpg")
+    carousel.add_image("image3.jpg")
+    carousel.show_images()  # Output: Carousel (forward): image1.jpg -> image2.jpg -> image3.jpg
+    carousel.show_images_reverse()  # Output: Carousel (backward): image3.jpg -> image2.jpg -> image1.jpg
+    carousel.remove_image("image2.jpg")
+    carousel.show_images()  # Output: Carousel (forward): image1.jpg -> image3.jpg

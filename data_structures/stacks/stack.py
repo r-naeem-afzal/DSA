@@ -7,6 +7,36 @@ from typing import Any
 
 
 class Stack:
+    """
+    A stack is a linear data structure that follows the Last In First Out (LIFO) principle. The last element added to the stack is the first element to be removed.
+
+    Operations:
+    - is_empty: Check if the stack is empty.
+    - push: Add an element to the top of the stack.
+    - pop: Remove and return the element at the top of the stack.
+    - peek: Get the element at the top of the stack without removing it.
+    - display: Display the elements in the stack.
+
+    Applications:
+    - Function calls and recursion
+    - Undo mechanisms in text editors
+    - Backtracking algorithms
+
+    Time Complexity:
+    - is_empty: O(1)
+    - push: O(1)
+    - pop: O(1)
+    - peek: O(1)
+    - display: O(n)
+
+    Space Complexity:
+    - O(n)
+
+    Attributes:
+    - items: A list to store the items in the stack.
+
+    """
+
     def __init__(self) -> None:
         self.items = []
 

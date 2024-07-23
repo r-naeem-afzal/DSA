@@ -4,6 +4,38 @@ from data_structures.linked_lists.node import Node
 
 
 class CircularLinkedList:
+    """
+    A circular linked list is a linked list where all nodes are connected to form a circle. Each node has a reference to the next node in the sequence. The last node points back to the first node. The list can be traversed in both directions.
+
+    Operations:
+    - is_empty: Check if the list is empty.
+    - append: Add an item to the end of the list.
+    - prepend: Add an item to the beginning of the list.
+    - insert: Add an item at a specific index in the list.
+    - delete_node: Remove an item from the list.
+    - display: Display the items in the list.
+
+    Applications:
+    - Circular buffer
+    - Carousel
+    - Multiplayer games
+
+    Time Complexity:
+    - is_empty: O(1)
+    - append: O(n)
+    - prepend: O(n)
+    - insert: O(n)
+    - delete_node: O(n)
+    - display: O(n)
+
+    Space Complexity:
+    - O(n)
+
+    Attributes:
+    - head: The first node in the list
+
+    """
+
     def __init__(self) -> None:
         self.head = None
 
@@ -93,13 +125,16 @@ class CircularLinkedList:
                 break
 
 
-cll = CircularLinkedList()
-cll.append("A")
-cll.append("B")
-cll.append("C")
-cll.prepend("D")
-print(
-    "Circular Linked List:", cll.display()
-)  # Output: Circular Linked List: ['D', 'A', 'B', 'C']
-cll.delete_node("B")
-print("After Deleting B:", cll.display())  # Output: After Deleting B: ['D', 'A', 'C']
+if __name__ == "__main__":
+    cll = CircularLinkedList()
+    cll.append("A")
+    cll.append("B")
+    cll.append("C")
+    cll.prepend("D")
+    print(
+        "Circular Linked List:", cll.display()
+    )  # Output: Circular Linked List: ['D', 'A', 'B', 'C']
+    cll.delete_node("B")
+    print(
+        "After Deleting B:", cll.display()
+    )  # Output: After Deleting B: ['D', 'A', 'C']

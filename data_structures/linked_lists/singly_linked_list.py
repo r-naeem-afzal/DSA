@@ -3,6 +3,32 @@ from typing import Any
 
 
 class SinglyLinkedList:
+    """
+    A singly linked list is a data structure that consists of a sequence of nodes. Each node contains an element and a reference to the next node in the sequence. The list can be traversed in one direction.
+
+    Operations:
+    - is_empty: Check if the list is empty.
+    - append: Add a new node to the end of the list.
+    - prepend: Add a new node to the beginning of the list.
+    - insert: Add a new node at a specific index in the list.
+    - remove: Remove the first node with the specified data.
+    - pop: Remove the node at a specific index in the list.
+
+    Time Complexity:
+    - is_empty: O(1)
+    - append: O(n)
+    - prepend: O(1)
+    - insert: O(n)
+    - remove: O(n)
+    - pop: O(n)
+
+    Space Complexity:
+    - O(n)
+
+    Attributes:
+    - head: The first node in the list
+    """
+
     def __init__(self) -> None:
         self.head: Node | None = None
 

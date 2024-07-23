@@ -8,6 +8,38 @@ from data_structures.linked_lists.node import Node
 
 
 class DoublyCircularLinkedList:
+    """
+    A doubly circular linked list is a linear data structure that consists of a sequence of elements. Each element points to the next element and the previous element. The last element points to the first element, forming a circle. The first element points to the last element. The list can be traversed in both directions.
+
+    Operations:
+    - is_empty: Check if the list is empty.
+    - append: Add an item to the end of the list.
+    - prepend: Add an item to the beginning of the list.
+    - insert_after: Add an item after a specific item in the list.
+    - delete_node: Remove an item from the list.
+    - display: Display the items in the list.
+    - display_reverse: Display the items in the list in reverse.
+
+    Applications:
+    - Carousel
+    - Multiplayer games
+
+    Time Complexity:
+    - is_empty: O(1)
+    - append: O(n)
+    - prepend: O(n)
+    - insert_after: O(n)
+    - delete_node: O(n)
+    - display: O(n)
+    - display_reverse: O(n)
+
+    Space Complexity:
+    - O(n)
+
+    Attributes:
+    - head: The first node in the list
+    """
+
     def __init__(self) -> None:
         self.head = None
 
@@ -132,18 +164,19 @@ class DoublyCircularLinkedList:
         return nodes
 
 
-dll = DoublyCircularLinkedList()
-dll.append("A")
-dll.append("B")
-dll.append("C")
-dll.prepend("D")
-print("Forward:", dll.display())  # Output: Forward: ['D', 'A', 'B', 'C']
-print("Backward:", dll.display_reverse())  # Output: Backward: ['C', 'B', 'A', 'D']
-dll.insert_after("B", "E")
-print(
-    "After Inserting E after B:", dll.display()
-)  # Output: After Inserting E after B: ['D', 'A', 'B', 'E', 'C']
-dll.delete_node("A")
-print(
-    "After Deleting A:", dll.display()
-)  # Output: After Deleting A: ['D', 'B', 'E', 'C']
+if __name__ == "__main__":
+    dll = DoublyCircularLinkedList()
+    dll.append("A")
+    dll.append("B")
+    dll.append("C")
+    dll.prepend("D")
+    print("Forward:", dll.display())  # Output: Forward: ['D', 'A', 'B', 'C']
+    print("Backward:", dll.display_reverse())  # Output: Backward: ['C', 'B', 'A', 'D']
+    dll.insert_after("B", "E")
+    print(
+        "After Inserting E after B:", dll.display()
+    )  # Output: After Inserting E after B: ['D', 'A', 'B', 'E', 'C']
+    dll.delete_node("A")
+    print(
+        "After Deleting A:", dll.display()
+    )  # Output: After Deleting A: ['D', 'B', 'E', 'C']

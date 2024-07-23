@@ -90,6 +90,14 @@
         "documentation": {}
     },
     {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Node",
         "importPath": "data_structures.linked_lists.node",
         "description": "data_structures.linked_lists.node",
@@ -127,6 +135,14 @@
         "description": "node",
         "isExtraImport": true,
         "detail": "node",
+        "documentation": {}
+    },
+    {
+        "label": "Queue",
+        "importPath": "queues.queue",
+        "description": "queues.queue",
+        "isExtraImport": true,
+        "detail": "queues.queue",
         "documentation": {}
     },
     {
@@ -327,6 +343,15 @@
         "documentation": {}
     },
     {
+        "label": "MinHeap",
+        "kind": 6,
+        "importPath": "data_structures.heaps.min_heap",
+        "description": "data_structures.heaps.min_heap",
+        "peekOfCode": "class MinHeap:\n    \"\"\"\n    A MinHeap is a complete binary tree where each node is smaller than its children. The root node is the smallest element in the heap. The two main operations are insert and extract_min. The time complexity of both operations is O(log n).\n    Attributes:\n    - heap: A list to store the elements in the heap.\n    Methods:\n    - get_parent_index(index: int) -> int: Returns the index of the parent node of the node at the given index.\n    - get_left_child_index(index: int) -> int: Returns the index of the left child of the node at the given index.\n    - get_right_child_index(index: int) -> int: Returns the index of the right child of the node at the given index.\n    - has_parent(index: int) -> bool: Returns True if the node at the given index has a parent, False otherwise.",
+        "detail": "data_structures.heaps.min_heap",
+        "documentation": {}
+    },
+    {
         "label": "MusicPlaylist",
         "kind": 6,
         "importPath": "data_structures.linked_lists.examples.circular_linked_playlist",
@@ -336,29 +361,11 @@
         "documentation": {}
     },
     {
-        "label": "playlist",
-        "kind": 5,
-        "importPath": "data_structures.linked_lists.examples.circular_linked_playlist",
-        "description": "data_structures.linked_lists.examples.circular_linked_playlist",
-        "peekOfCode": "playlist = MusicPlaylist()\nplaylist.add_song(\"Song 1\")\nplaylist.add_song(\"Song 2\")\nplaylist.add_song(\"Song 3\")\nplaylist.show_playlist()  # Output: Current Playlist: Song 1 -> Song 2 -> Song 3\nplaylist.remove_song(\"Song 2\")\nplaylist.show_playlist()  # Output: Current Playlist: Song 1 -> Song 3",
-        "detail": "data_structures.linked_lists.examples.circular_linked_playlist",
-        "documentation": {}
-    },
-    {
         "label": "Carousel",
         "kind": 6,
         "importPath": "data_structures.linked_lists.examples.doubly_linked_list_carousel",
         "description": "data_structures.linked_lists.examples.doubly_linked_list_carousel",
         "peekOfCode": "class Carousel:\n    def __init__(self) -> None:\n        self.images = DoublyCircularLinkedList()\n    def add_image(self, image_name: str) -> None:\n        self.images.append(image_name)\n        print(f'Image \"{image_name}\" added to the carousel.')\n    def remove_image(self, image_name: str) -> None:\n        self.images.delete_node(image_name)\n        print(f'Image \"{image_name}\" removed from the carousel.')\n    def show_images(self) -> None:",
-        "detail": "data_structures.linked_lists.examples.doubly_linked_list_carousel",
-        "documentation": {}
-    },
-    {
-        "label": "carousel",
-        "kind": 5,
-        "importPath": "data_structures.linked_lists.examples.doubly_linked_list_carousel",
-        "description": "data_structures.linked_lists.examples.doubly_linked_list_carousel",
-        "peekOfCode": "carousel = Carousel()\ncarousel.add_image(\"image1.jpg\")\ncarousel.add_image(\"image2.jpg\")\ncarousel.add_image(\"image3.jpg\")\ncarousel.show_images()  # Output: Carousel (forward): image1.jpg -> image2.jpg -> image3.jpg\ncarousel.show_images_reverse()  # Output: Carousel (backward): image3.jpg -> image2.jpg -> image1.jpg\ncarousel.remove_image(\"image2.jpg\")\ncarousel.show_images()  # Output: Carousel (forward): image1.jpg -> image3.jpg",
         "detail": "data_structures.linked_lists.examples.doubly_linked_list_carousel",
         "documentation": {}
     },
@@ -394,16 +401,7 @@
         "kind": 6,
         "importPath": "data_structures.linked_lists.circular_linked_list",
         "description": "data_structures.linked_lists.circular_linked_list",
-        "peekOfCode": "class CircularLinkedList:\n    def __init__(self) -> None:\n        self.head = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def append(self, data: Any) -> None:\n        new_node = Node(data)\n        if self.is_empty():\n            self.head = new_node\n            new_node.next = self.head",
-        "detail": "data_structures.linked_lists.circular_linked_list",
-        "documentation": {}
-    },
-    {
-        "label": "cll",
-        "kind": 5,
-        "importPath": "data_structures.linked_lists.circular_linked_list",
-        "description": "data_structures.linked_lists.circular_linked_list",
-        "peekOfCode": "cll = CircularLinkedList()\ncll.append(\"A\")\ncll.append(\"B\")\ncll.append(\"C\")\ncll.prepend(\"D\")\nprint(\n    \"Circular Linked List:\", cll.display()\n)  # Output: Circular Linked List: ['D', 'A', 'B', 'C']\ncll.delete_node(\"B\")\nprint(\"After Deleting B:\", cll.display())  # Output: After Deleting B: ['D', 'A', 'C']",
+        "peekOfCode": "class CircularLinkedList:\n    \"\"\"\n    A circular linked list is a linked list where all nodes are connected to form a circle. Each node has a reference to the next node in the sequence. The last node points back to the first node. The list can be traversed in both directions.\n    Operations:\n    - is_empty: Check if the list is empty.\n    - append: Add an item to the end of the list.\n    - prepend: Add an item to the beginning of the list.\n    - insert: Add an item at a specific index in the list.\n    - delete_node: Remove an item from the list.\n    - display: Display the items in the list.",
         "detail": "data_structures.linked_lists.circular_linked_list",
         "documentation": {}
     },
@@ -412,16 +410,7 @@
         "kind": 6,
         "importPath": "data_structures.linked_lists.doubly_circular_linked_list",
         "description": "data_structures.linked_lists.doubly_circular_linked_list",
-        "peekOfCode": "class DoublyCircularLinkedList:\n    def __init__(self) -> None:\n        self.head = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def __is_next_node_head(self, current_node: Node) -> bool:\n        return current_node.next == self.head\n    def __get_next_node(self, current_node: Node) -> Node:\n        return current_node.next\n    def append(self, data: Any) -> None:",
-        "detail": "data_structures.linked_lists.doubly_circular_linked_list",
-        "documentation": {}
-    },
-    {
-        "label": "dll",
-        "kind": 5,
-        "importPath": "data_structures.linked_lists.doubly_circular_linked_list",
-        "description": "data_structures.linked_lists.doubly_circular_linked_list",
-        "peekOfCode": "dll = DoublyCircularLinkedList()\ndll.append(\"A\")\ndll.append(\"B\")\ndll.append(\"C\")\ndll.prepend(\"D\")\nprint(\"Forward:\", dll.display())  # Output: Forward: ['D', 'A', 'B', 'C']\nprint(\"Backward:\", dll.display_reverse())  # Output: Backward: ['C', 'B', 'A', 'D']\ndll.insert_after(\"B\", \"E\")\nprint(\n    \"After Inserting E after B:\", dll.display()",
+        "peekOfCode": "class DoublyCircularLinkedList:\n    \"\"\"\n    A doubly circular linked list is a linear data structure that consists of a sequence of elements. Each element points to the next element and the previous element. The last element points to the first element, forming a circle. The first element points to the last element. The list can be traversed in both directions.\n    Operations:\n    - is_empty: Check if the list is empty.\n    - append: Add an item to the end of the list.\n    - prepend: Add an item to the beginning of the list.\n    - insert_after: Add an item after a specific item in the list.\n    - delete_node: Remove an item from the list.\n    - display: Display the items in the list.",
         "detail": "data_structures.linked_lists.doubly_circular_linked_list",
         "documentation": {}
     },
@@ -430,7 +419,7 @@
         "kind": 6,
         "importPath": "data_structures.linked_lists.doubly_linked_list",
         "description": "data_structures.linked_lists.doubly_linked_list",
-        "peekOfCode": "class DoublyLinkedList:\n    def __init__(self) -> None:\n        self.head: Node | None = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def append(self, data: Any) -> None:\n        \"\"\"\n        Add a new node to the end of the list\n        \"\"\"\n        new_node = Node(data)",
+        "peekOfCode": "class DoublyLinkedList:\n    \"\"\"\n    A doubly linked list is a list that consists of a sequence of elements in which every element has a link to its previous element and next element.\n    Operations:\n    - is_empty: Check if the list is empty.\n    - append: Add a new node to the end of the list.\n    - prepend: Add a new node to the beginning of the list.\n    - insert: Add a new node at a specific index.\n    - remove: Remove a node at a specific index.\n    Applications:",
         "detail": "data_structures.linked_lists.doubly_linked_list",
         "documentation": {}
     },
@@ -439,7 +428,7 @@
         "kind": 5,
         "importPath": "data_structures.linked_lists.doubly_linked_list",
         "description": "data_structures.linked_lists.doubly_linked_list",
-        "peekOfCode": "index_error_message = \"Index out of range\"\nclass DoublyLinkedList:\n    def __init__(self) -> None:\n        self.head: Node | None = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def append(self, data: Any) -> None:\n        \"\"\"\n        Add a new node to the end of the list\n        \"\"\"",
+        "peekOfCode": "index_error_message = \"Index out of range\"\nclass DoublyLinkedList:\n    \"\"\"\n    A doubly linked list is a list that consists of a sequence of elements in which every element has a link to its previous element and next element.\n    Operations:\n    - is_empty: Check if the list is empty.\n    - append: Add a new node to the end of the list.\n    - prepend: Add a new node to the beginning of the list.\n    - insert: Add a new node at a specific index.\n    - remove: Remove a node at a specific index.",
         "detail": "data_structures.linked_lists.doubly_linked_list",
         "documentation": {}
     },
@@ -457,7 +446,7 @@
         "kind": 6,
         "importPath": "data_structures.linked_lists.singly_linked_list",
         "description": "data_structures.linked_lists.singly_linked_list",
-        "peekOfCode": "class SinglyLinkedList:\n    def __init__(self) -> None:\n        self.head: Node | None = None\n    def is_empty(self) -> bool:\n        return self.head is None\n    def append(self, data: Any) -> None:\n        \"\"\"\n        Add a new node to the end of the list\n        \"\"\"\n        new_node = Node(data)",
+        "peekOfCode": "class SinglyLinkedList:\n    \"\"\"\n    A singly linked list is a data structure that consists of a sequence of nodes. Each node contains an element and a reference to the next node in the sequence. The list can be traversed in one direction.\n    Operations:\n    - is_empty: Check if the list is empty.\n    - append: Add a new node to the end of the list.\n    - prepend: Add a new node to the beginning of the list.\n    - insert: Add a new node at a specific index in the list.\n    - remove: Remove the first node with the specified data.\n    - pop: Remove the node at a specific index in the list.",
         "detail": "data_structures.linked_lists.singly_linked_list",
         "documentation": {}
     },
@@ -466,17 +455,35 @@
         "kind": 6,
         "importPath": "data_structures.linked_lists.stack_linked_list",
         "description": "data_structures.linked_lists.stack_linked_list",
-        "peekOfCode": "class StackLinkedList:\n    def __init__(self) -> None:\n        self.head = None\n    def push(self, data: Any) -> None:\n        new_node = Node(data)\n        if self.is_empty():\n            self.head = new_node\n            return\n        new_node.next = self.head\n        self.head = new_node",
+        "peekOfCode": "class StackLinkedList:\n    \"\"\"\n    A stack is a linear data structure that follows the Last In First Out (LIFO) principle. The last element added to the stack is the first element to be removed. A stack can be implemented using an array or a linked list. In this implementation, a singly linked list is used.\n    Operations:\n    - push: Add an element to the top of the stack.\n    - pop: Remove and return the element at the top of the stack.\n    - peek: Get the element at the top of the stack without removing it.\n    - is_empty: Check if the stack is empty.\n    - display: Display the elements in the stack.\n    Applications:",
         "detail": "data_structures.linked_lists.stack_linked_list",
         "documentation": {}
     },
     {
-        "label": "stack",
-        "kind": 5,
-        "importPath": "data_structures.linked_lists.stack_linked_list",
-        "description": "data_structures.linked_lists.stack_linked_list",
-        "peekOfCode": "stack = StackLinkedList()\nstack.push(1)\nstack.push(2)\nstack.push(3)\nstack.display()  # Output: Stack: Top -> 3 -> 2 -> 1\nprint(\"Peek:\", stack.peek())  # Output: Peek: 3\nstack.pop()  # Output: Popped 3 from the stack.\nstack.display()  # Output: Stack: Top -> 2 -> 1",
-        "detail": "data_structures.linked_lists.stack_linked_list",
+        "label": "TicketingSystem",
+        "kind": 6,
+        "importPath": "data_structures.queues.examples.ticketing_system",
+        "description": "data_structures.queues.examples.ticketing_system",
+        "peekOfCode": "class TicketingSystem:\n    def __init__(self) -> None:\n        self.customers = Queue()\n    def new_customer(self, customer_name: str) -> None:\n        self.customers.enqueue(customer_name)\n        print(f'Customer \"{customer_name}\" added to the queue.')\n    def serve_customer(self) -> None:\n        customer = self.customers.dequeue()\n        if customer:\n            print(f'Customer \"{customer}\" served.')",
+        "detail": "data_structures.queues.examples.ticketing_system",
+        "documentation": {}
+    },
+    {
+        "label": "CircularQueue",
+        "kind": 6,
+        "importPath": "data_structures.queues.circular_queue",
+        "description": "data_structures.queues.circular_queue",
+        "peekOfCode": "class CircularQueue:\n    \"\"\"\n    A circular queue is a data structure that uses a single, fixed-size array to store elements. It follows the FIFO (First In First Out) principle. When the rear of the queue reaches the end of the array, it wraps around to the beginning of the array. This allows the queue to use the space efficiently.\n    Operations:\n    - is_empty: Check if the queue is empty.\n    - is_full: Check if the queue is full.\n    - enqueue: Add an item to the rear of the queue.\n    - dequeue: Remove an item from the front of the queue.\n    - peek: Get the item at the front of the queue without removing it.\n    - display: Display the items in the queue.",
+        "detail": "data_structures.queues.circular_queue",
+        "documentation": {}
+    },
+    {
+        "label": "Queue",
+        "kind": 6,
+        "importPath": "data_structures.queues.queue",
+        "description": "data_structures.queues.queue",
+        "peekOfCode": "class Queue:\n    \"\"\"\n    A queue is a linear data structure that follows the FIFO (First In First Out) principle. The first element added to the queue is the first element to be removed. A queue can be implemented using an array or a linked list. In this implementation, a list is used.\n    Operations:\n    - is_empty: Check if the queue is empty.\n    - enqueue: Add an item to the rear of the queue.\n    - dequeue: Remove an item from the front of the queue.\n    - peek: Get the item at the front of the queue without removing it.\n    - size: Get the number of items in the queue.\n    - display: Display the items in the queue.",
+        "detail": "data_structures.queues.queue",
         "documentation": {}
     },
     {
@@ -502,7 +509,7 @@
         "kind": 6,
         "importPath": "data_structures.stacks.stack",
         "description": "data_structures.stacks.stack",
-        "peekOfCode": "class Stack:\n    def __init__(self) -> None:\n        self.items = []\n    def is_empty(self) -> bool:\n        return len(self.items) == 0\n    def push(self, item: Any) -> None:\n        self.items.append(item)\n    def pop(self) -> Any:\n        if self.is_empty():\n            print(\"Stack is empty.\")",
+        "peekOfCode": "class Stack:\n    \"\"\"\n    A stack is a linear data structure that follows the Last In First Out (LIFO) principle. The last element added to the stack is the first element to be removed.\n    Operations:\n    - is_empty: Check if the stack is empty.\n    - push: Add an element to the top of the stack.\n    - pop: Remove and return the element at the top of the stack.\n    - peek: Get the element at the top of the stack without removing it.\n    - display: Display the elements in the stack.\n    Applications:",
         "detail": "data_structures.stacks.stack",
         "documentation": {}
     },

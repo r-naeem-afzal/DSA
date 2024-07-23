@@ -21,11 +21,11 @@ class MusicPlaylist:
             print("The playlist is empty.")
 
 
-# Example usage:
-playlist = MusicPlaylist()
-playlist.add_song("Song 1")
-playlist.add_song("Song 2")
-playlist.add_song("Song 3")
-playlist.show_playlist()  # Output: Current Playlist: Song 1 -> Song 2 -> Song 3
-playlist.remove_song("Song 2")
-playlist.show_playlist()  # Output: Current Playlist: Song 1 -> Song 3
+if __name__ == "__main__":
+    playlist = MusicPlaylist()
+    playlist.add_song("Song 1")
+    playlist.add_song("Song 2")
+    playlist.add_song("Song 3")
+    playlist.show_playlist()  # Output: Current Playlist: Song 1 -> Song 2 -> Song 3
+    playlist.remove_song("Song 2")
+    playlist.show_playlist()  # Output: Current Playlist: Song 1 -> Song 3

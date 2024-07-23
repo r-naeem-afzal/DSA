@@ -6,6 +6,36 @@ index_error_message = "Index out of range"
 
 
 class DoublyLinkedList:
+    """
+    A doubly linked list is a list that consists of a sequence of elements in which every element has a link to its previous element and next element.
+
+    Operations:
+    - is_empty: Check if the list is empty.
+    - append: Add a new node to the end of the list.
+    - prepend: Add a new node to the beginning of the list.
+    - insert: Add a new node at a specific index.
+    - remove: Remove a node at a specific index.
+
+    Applications:
+    - Undo functionality in text editors
+    - Browser history
+    - Music playlist
+    - Doubly linked list is used by the LRU (Least Recently Used) cache algorithm
+
+    Time Complexity:
+    - is_empty: O(1)
+    - append: O(n)
+    - prepend: O(1)
+    - insert: O(n)
+    - remove: O(n)
+
+    Space Complexity:
+    - O(n)
+
+    Attributes:
+    - head: The first node in the list
+    """
+
     def __init__(self) -> None:
         self.head: Node | None = None
 
