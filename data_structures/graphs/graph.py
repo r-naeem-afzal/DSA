@@ -24,7 +24,6 @@ class Graph:
     - Computer networks
     - Routing algorithms
 
-
     """
 
     def __init__(self):
