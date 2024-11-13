@@ -29,24 +29,29 @@ class MagicAttack(Strategy):
 
 class Character:
     def __init__(self, attack_strategy: Strategy):
-        self.attack_strategy = attack_strategy
+        self._attack_strategy = attack_strategy
 
     def set_attack_strategy(self, attack_strategy: Strategy):
-        self.attack_strategy = attack_strategy
+        self._attack_strategy = attack_strategy
+
+    @property
+    def attack_strategy(self):
+        return self._attack_strategy
+
+    @attack_strategy.setter
+    def attack_strategy(self, attack_strategy):
+        self._attack_strategy = attack_strategy
 
     def attack(self):
         self.attack_strategy.execute()
 
 
 if __name__ == "__main__":
-    character = Character(attack_strategy=SwordAttack())
-    character.attack()
-    # Output: Attacking with a sword
+    character = Character(SwordAttack())
+    character.attack()  # Output: Attacking with a sword
 
-    character.set_attack_strategy(BowAndArrowAttack())
-    character.attack()
-    # Output: Attacking with a bow and arrow
+    character.attack_strategy = BowAndArrowAttack()
+    character.attack()  # Output: Attacking with a bow and arrow
 
     character.set_attack_strategy(MagicAttack())
-    character.attack()
-    # Output: Attacking with magic
+    character.attack()  # Output: Attacking with magic
