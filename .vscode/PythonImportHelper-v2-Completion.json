@@ -923,7 +923,7 @@
         "kind": 6,
         "importPath": "design_patterns.strategy.examples.attack_strategy",
         "description": "design_patterns.strategy.examples.attack_strategy",
-        "peekOfCode": "class MagicAttack(Strategy):\n    def execute(self):\n        print(\"Attacking with magic\")\n# ------------------------------------- x ------------------------------------ #\nclass Character:\n    def __init__(self, attack_strategy: Strategy):\n        self._attack_strategy = attack_strategy\n    def set_attack_strategy(self, attack_strategy: Strategy):\n        self._attack_strategy = attack_strategy\n    @property",
+        "peekOfCode": "class MagicAttack(Strategy):\n    def execute(self):\n        print(\"Attacking with magic\")\n# ------------------------------------- x ------------------------------------ #\nclass Character:\n    def __init__(self, attack_strategy: Strategy):\n        self._attack_strategy = attack_strategy\n    @property\n    def attack_strategy(self):\n        return self._attack_strategy",
         "detail": "design_patterns.strategy.examples.attack_strategy",
         "documentation": {}
     },
@@ -932,7 +932,7 @@
         "kind": 6,
         "importPath": "design_patterns.strategy.examples.attack_strategy",
         "description": "design_patterns.strategy.examples.attack_strategy",
-        "peekOfCode": "class Character:\n    def __init__(self, attack_strategy: Strategy):\n        self._attack_strategy = attack_strategy\n    def set_attack_strategy(self, attack_strategy: Strategy):\n        self._attack_strategy = attack_strategy\n    @property\n    def attack_strategy(self):\n        return self._attack_strategy\n    @attack_strategy.setter\n    def attack_strategy(self, attack_strategy):",
+        "peekOfCode": "class Character:\n    def __init__(self, attack_strategy: Strategy):\n        self._attack_strategy = attack_strategy\n    @property\n    def attack_strategy(self):\n        return self._attack_strategy\n    @attack_strategy.setter\n    def attack_strategy(self, attack_strategy):\n        self._attack_strategy = attack_strategy\n    def attack(self):",
         "detail": "design_patterns.strategy.examples.attack_strategy",
         "documentation": {}
     },

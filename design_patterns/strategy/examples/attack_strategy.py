@@ -31,9 +31,6 @@ class Character:
     def __init__(self, attack_strategy: Strategy):
         self._attack_strategy = attack_strategy
 
-    def set_attack_strategy(self, attack_strategy: Strategy):
-        self._attack_strategy = attack_strategy
-
     @property
     def attack_strategy(self):
         return self._attack_strategy
@@ -53,5 +50,5 @@ if __name__ == "__main__":
     character.attack_strategy = BowAndArrowAttack()
     character.attack()  # Output: Attacking with a bow and arrow
 
-    character.set_attack_strategy(MagicAttack())
+    character.attack_strategy = MagicAttack()
     character.attack()  # Output: Attacking with magic
