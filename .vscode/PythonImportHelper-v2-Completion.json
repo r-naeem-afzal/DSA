@@ -114,6 +114,14 @@
         "documentation": {}
     },
     {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Optional",
         "importPath": "typing",
         "description": "typing",
@@ -746,6 +754,42 @@
         "description": "data_structures.stacks.stack",
         "peekOfCode": "stack = Stack()\nstack.push(1)\nstack.push(2)\nstack.push(3)\nstack.display()  # Output: Stack: [1, 2, 3]\nprint(\"Peek:\", stack.peek())  # Output: Peek: 3\nstack.pop()  # Output: Popped 3 from the stack.\nstack.display()  # Output: Stack: [1, 2]",
         "detail": "data_structures.stacks.stack",
+        "documentation": {}
+    },
+    {
+        "label": "Decorator",
+        "kind": 6,
+        "importPath": "design_patterns.decorator.decorator",
+        "description": "design_patterns.decorator.decorator",
+        "peekOfCode": "class Decorator:\n    def __init__(self, coffee: Union[\"Coffee\", \"Decorator\"]):\n        self._coffee = coffee\n    def cost(self) -> float:\n        return self._coffee.cost()\nclass MilkDecorator(Decorator):\n    def cost(self) -> float:\n        return self._coffee.cost() + 0.5\nclass SugarDecorator(Decorator):\n    def cost(self) -> float:",
+        "detail": "design_patterns.decorator.decorator",
+        "documentation": {}
+    },
+    {
+        "label": "MilkDecorator",
+        "kind": 6,
+        "importPath": "design_patterns.decorator.decorator",
+        "description": "design_patterns.decorator.decorator",
+        "peekOfCode": "class MilkDecorator(Decorator):\n    def cost(self) -> float:\n        return self._coffee.cost() + 0.5\nclass SugarDecorator(Decorator):\n    def cost(self) -> float:\n        return self._coffee.cost() + 0.2\n# ------------------------------------- x ------------------------------------ #\nclass Coffee:\n    def cost(self) -> float:\n        return 2",
+        "detail": "design_patterns.decorator.decorator",
+        "documentation": {}
+    },
+    {
+        "label": "SugarDecorator",
+        "kind": 6,
+        "importPath": "design_patterns.decorator.decorator",
+        "description": "design_patterns.decorator.decorator",
+        "peekOfCode": "class SugarDecorator(Decorator):\n    def cost(self) -> float:\n        return self._coffee.cost() + 0.2\n# ------------------------------------- x ------------------------------------ #\nclass Coffee:\n    def cost(self) -> float:\n        return 2\nif __name__ == \"__main__\":\n    coffee = Coffee()\n    print(f\"Cost of coffee: {coffee.cost()}\")  # Output: Cost of coffee: 2",
+        "detail": "design_patterns.decorator.decorator",
+        "documentation": {}
+    },
+    {
+        "label": "Coffee",
+        "kind": 6,
+        "importPath": "design_patterns.decorator.decorator",
+        "description": "design_patterns.decorator.decorator",
+        "peekOfCode": "class Coffee:\n    def cost(self) -> float:\n        return 2\nif __name__ == \"__main__\":\n    coffee = Coffee()\n    print(f\"Cost of coffee: {coffee.cost()}\")  # Output: Cost of coffee: 2\n    milk_coffee = MilkDecorator(coffee)\n    print(\n        f\"Cost of milk coffee: {milk_coffee.cost()}\"\n    )  # Output: Cost of milk coffee: 2.5",
+        "detail": "design_patterns.decorator.decorator",
         "documentation": {}
     },
     {
