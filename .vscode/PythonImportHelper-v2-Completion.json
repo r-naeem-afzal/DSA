@@ -234,6 +234,22 @@
         "documentation": {}
     },
     {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
         "label": "Factory",
         "importPath": "factory.factory",
         "description": "factory.factory",
@@ -263,6 +279,14 @@
         "description": "singleton.singleton",
         "isExtraImport": true,
         "detail": "singleton.singleton",
+        "documentation": {}
+    },
+    {
+        "label": "Strategy",
+        "importPath": "strategy.strategy",
+        "description": "strategy.strategy",
+        "isExtraImport": true,
+        "detail": "strategy.strategy",
         "documentation": {}
     },
     {
@@ -830,6 +854,51 @@
         "description": "design_patterns.singleton.singleton",
         "peekOfCode": "class Singleton(ABC):\n    _instance = None\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls, *args, **kwargs)\n        return cls._instance",
         "detail": "design_patterns.singleton.singleton",
+        "documentation": {}
+    },
+    {
+        "label": "SwordAttack",
+        "kind": 6,
+        "importPath": "design_patterns.strategy.examples.attack_strategy",
+        "description": "design_patterns.strategy.examples.attack_strategy",
+        "peekOfCode": "class SwordAttack(Strategy):\n    def execute(self):\n        print(\"Attacking with a sword\")\nclass BowAndArrowAttack(Strategy):\n    def execute(self):\n        print(\"Attacking with a bow and arrow\")\nclass MagicAttack(Strategy):\n    def execute(self):\n        print(\"Attacking with magic\")\n# ------------------------------------- x ------------------------------------ #",
+        "detail": "design_patterns.strategy.examples.attack_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "BowAndArrowAttack",
+        "kind": 6,
+        "importPath": "design_patterns.strategy.examples.attack_strategy",
+        "description": "design_patterns.strategy.examples.attack_strategy",
+        "peekOfCode": "class BowAndArrowAttack(Strategy):\n    def execute(self):\n        print(\"Attacking with a bow and arrow\")\nclass MagicAttack(Strategy):\n    def execute(self):\n        print(\"Attacking with magic\")\n# ------------------------------------- x ------------------------------------ #\nclass Character:\n    def __init__(self, attack_strategy: Strategy):\n        self.attack_strategy = attack_strategy",
+        "detail": "design_patterns.strategy.examples.attack_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "MagicAttack",
+        "kind": 6,
+        "importPath": "design_patterns.strategy.examples.attack_strategy",
+        "description": "design_patterns.strategy.examples.attack_strategy",
+        "peekOfCode": "class MagicAttack(Strategy):\n    def execute(self):\n        print(\"Attacking with magic\")\n# ------------------------------------- x ------------------------------------ #\nclass Character:\n    def __init__(self, attack_strategy: Strategy):\n        self.attack_strategy = attack_strategy\n    def set_attack_strategy(self, attack_strategy: Strategy):\n        self.attack_strategy = attack_strategy\n    def attack(self):",
+        "detail": "design_patterns.strategy.examples.attack_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "Character",
+        "kind": 6,
+        "importPath": "design_patterns.strategy.examples.attack_strategy",
+        "description": "design_patterns.strategy.examples.attack_strategy",
+        "peekOfCode": "class Character:\n    def __init__(self, attack_strategy: Strategy):\n        self.attack_strategy = attack_strategy\n    def set_attack_strategy(self, attack_strategy: Strategy):\n        self.attack_strategy = attack_strategy\n    def attack(self):\n        self.attack_strategy.execute()\nif __name__ == \"__main__\":\n    character = Character(attack_strategy=SwordAttack())\n    character.attack()",
+        "detail": "design_patterns.strategy.examples.attack_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "Strategy",
+        "kind": 6,
+        "importPath": "design_patterns.strategy.strategy",
+        "description": "design_patterns.strategy.strategy",
+        "peekOfCode": "class Strategy(ABC):\n    @abstractmethod\n    def execute(self):\n        pass",
+        "detail": "design_patterns.strategy.strategy",
         "documentation": {}
     },
     {
