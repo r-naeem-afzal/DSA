@@ -114,6 +114,14 @@
         "documentation": {}
     },
     {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Node",
         "importPath": "data_structures.linked_lists.node",
         "description": "data_structures.linked_lists.node",
@@ -210,11 +218,43 @@
         "documentation": {}
     },
     {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
         "label": "Factory",
         "importPath": "factory.factory",
         "description": "factory.factory",
         "isExtraImport": true,
         "detail": "factory.factory",
+        "documentation": {}
+    },
+    {
+        "label": "Publisher",
+        "importPath": "observer.observer",
+        "description": "observer.observer",
+        "isExtraImport": true,
+        "detail": "observer.observer",
+        "documentation": {}
+    },
+    {
+        "label": "Subscriber",
+        "importPath": "observer.observer",
+        "description": "observer.observer",
+        "isExtraImport": true,
+        "detail": "observer.observer",
         "documentation": {}
     },
     {
@@ -689,7 +729,7 @@
         "kind": 6,
         "importPath": "design_patterns.factory.examples.vehicle_factory",
         "description": "design_patterns.factory.examples.vehicle_factory",
-        "peekOfCode": "class Vehicle(ABC):\n    @abstractmethod\n    def drive(self):\n        pass\nclass Car(Vehicle):\n    def drive(self):\n        return \"Driving a car\"\nclass Motorcycle(Vehicle):\n    def drive(self):\n        return \"Riding a motorcycle\"",
+        "peekOfCode": "class Vehicle(ABC):\n    @abstractmethod\n    def drive(self):\n        pass\n# ------------------------------------- - ------------------------------------ #\nclass Car(Vehicle):\n    def drive(self):\n        return \"Driving a car\"\nclass Motorcycle(Vehicle):\n    def drive(self):",
         "detail": "design_patterns.factory.examples.vehicle_factory",
         "documentation": {}
     },
@@ -698,7 +738,7 @@
         "kind": 6,
         "importPath": "design_patterns.factory.examples.vehicle_factory",
         "description": "design_patterns.factory.examples.vehicle_factory",
-        "peekOfCode": "class Car(Vehicle):\n    def drive(self):\n        return \"Driving a car\"\nclass Motorcycle(Vehicle):\n    def drive(self):\n        return \"Riding a motorcycle\"\nclass Truck(Vehicle):\n    def drive(self):\n        return \"Driving a truck\"\nclass VehicleFactory(Factory):",
+        "peekOfCode": "class Car(Vehicle):\n    def drive(self):\n        return \"Driving a car\"\nclass Motorcycle(Vehicle):\n    def drive(self):\n        return \"Riding a motorcycle\"\nclass Truck(Vehicle):\n    def drive(self):\n        return \"Driving a truck\"\n# ------------------------------------- - ------------------------------------ #",
         "detail": "design_patterns.factory.examples.vehicle_factory",
         "documentation": {}
     },
@@ -707,7 +747,7 @@
         "kind": 6,
         "importPath": "design_patterns.factory.examples.vehicle_factory",
         "description": "design_patterns.factory.examples.vehicle_factory",
-        "peekOfCode": "class Motorcycle(Vehicle):\n    def drive(self):\n        return \"Riding a motorcycle\"\nclass Truck(Vehicle):\n    def drive(self):\n        return \"Driving a truck\"\nclass VehicleFactory(Factory):\n    def create(self, vehicle_type: str) -> Vehicle:\n        if vehicle_type == \"car\":\n            return Car()",
+        "peekOfCode": "class Motorcycle(Vehicle):\n    def drive(self):\n        return \"Riding a motorcycle\"\nclass Truck(Vehicle):\n    def drive(self):\n        return \"Driving a truck\"\n# ------------------------------------- - ------------------------------------ #\nclass VehicleFactory(Factory):\n    def create(self, vehicle_type: str) -> Optional[Vehicle]:\n        if vehicle_type == \"car\":",
         "detail": "design_patterns.factory.examples.vehicle_factory",
         "documentation": {}
     },
@@ -716,7 +756,7 @@
         "kind": 6,
         "importPath": "design_patterns.factory.examples.vehicle_factory",
         "description": "design_patterns.factory.examples.vehicle_factory",
-        "peekOfCode": "class Truck(Vehicle):\n    def drive(self):\n        return \"Driving a truck\"\nclass VehicleFactory(Factory):\n    def create(self, vehicle_type: str) -> Vehicle:\n        if vehicle_type == \"car\":\n            return Car()\n        elif vehicle_type == \"motorcycle\":\n            return Motorcycle()\n        elif vehicle_type == \"truck\":",
+        "peekOfCode": "class Truck(Vehicle):\n    def drive(self):\n        return \"Driving a truck\"\n# ------------------------------------- - ------------------------------------ #\nclass VehicleFactory(Factory):\n    def create(self, vehicle_type: str) -> Optional[Vehicle]:\n        if vehicle_type == \"car\":\n            return Car()\n        if vehicle_type == \"motorcycle\":\n            return Motorcycle()",
         "detail": "design_patterns.factory.examples.vehicle_factory",
         "documentation": {}
     },
@@ -725,7 +765,7 @@
         "kind": 6,
         "importPath": "design_patterns.factory.examples.vehicle_factory",
         "description": "design_patterns.factory.examples.vehicle_factory",
-        "peekOfCode": "class VehicleFactory(Factory):\n    def create(self, vehicle_type: str) -> Vehicle:\n        if vehicle_type == \"car\":\n            return Car()\n        elif vehicle_type == \"motorcycle\":\n            return Motorcycle()\n        elif vehicle_type == \"truck\":\n            return Truck()\nif __name__ == \"__main__\":\n    vehicle_factory = VehicleFactory()",
+        "peekOfCode": "class VehicleFactory(Factory):\n    def create(self, vehicle_type: str) -> Optional[Vehicle]:\n        if vehicle_type == \"car\":\n            return Car()\n        if vehicle_type == \"motorcycle\":\n            return Motorcycle()\n        if vehicle_type == \"truck\":\n            return Truck()\n        else:\n            print(f\"Unknown vehicle type: {vehicle_type}\")",
         "detail": "design_patterns.factory.examples.vehicle_factory",
         "documentation": {}
     },
@@ -736,6 +776,42 @@
         "description": "design_patterns.factory.factory",
         "peekOfCode": "class Factory(ABC):\n    @abstractmethod\n    def create(self):\n        pass",
         "detail": "design_patterns.factory.factory",
+        "documentation": {}
+    },
+    {
+        "label": "Person",
+        "kind": 6,
+        "importPath": "design_patterns.observer.examples.weather_station",
+        "description": "design_patterns.observer.examples.weather_station",
+        "peekOfCode": "class Person(Subscriber):\n    def __init__(self, name: str):\n        self.name = name\n    def receive_notification(self, message):\n        print(f\"{self.name} received a notification: {message}\")\n# ------------------------------------- - ------------------------------------ #\nclass WeatherStation(Publisher):\n    def __init__(self):\n        self.subscribers = []\n    def add_subscriber(self, subscriber: Subscriber):",
+        "detail": "design_patterns.observer.examples.weather_station",
+        "documentation": {}
+    },
+    {
+        "label": "WeatherStation",
+        "kind": 6,
+        "importPath": "design_patterns.observer.examples.weather_station",
+        "description": "design_patterns.observer.examples.weather_station",
+        "peekOfCode": "class WeatherStation(Publisher):\n    def __init__(self):\n        self.subscribers = []\n    def add_subscriber(self, subscriber: Subscriber):\n        self.subscribers.append(subscriber)\n    def remove_subscriber(self, subscriber: Subscriber):\n        self.subscribers.remove(subscriber)\n    def notify_subscribers(self):\n        for subscriber in self.subscribers:\n            subscriber.receive_notification(\"Weather is sunny today\")",
+        "detail": "design_patterns.observer.examples.weather_station",
+        "documentation": {}
+    },
+    {
+        "label": "Subscriber",
+        "kind": 6,
+        "importPath": "design_patterns.observer.observer",
+        "description": "design_patterns.observer.observer",
+        "peekOfCode": "class Subscriber(ABC):\n    @abstractmethod\n    def receive_notification(self, message: str):\n        pass\nclass Publisher(ABC):\n    @abstractmethod\n    def add_subscriber(self, subscriber: Subscriber):\n        pass\n    @abstractmethod\n    def remove_subscriber(self, subscriber: Subscriber):",
+        "detail": "design_patterns.observer.observer",
+        "documentation": {}
+    },
+    {
+        "label": "Publisher",
+        "kind": 6,
+        "importPath": "design_patterns.observer.observer",
+        "description": "design_patterns.observer.observer",
+        "peekOfCode": "class Publisher(ABC):\n    @abstractmethod\n    def add_subscriber(self, subscriber: Subscriber):\n        pass\n    @abstractmethod\n    def remove_subscriber(self, subscriber: Subscriber):\n        pass\n    @abstractmethod\n    def notify_subscribers(self):\n        pass",
+        "detail": "design_patterns.observer.observer",
         "documentation": {}
     },
     {
